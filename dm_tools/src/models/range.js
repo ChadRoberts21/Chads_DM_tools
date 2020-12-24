@@ -3,4 +3,8 @@ export default class Range {
     this.minimum = min;
     this.maximum = max;
   }
+
+  inRange(value) {
+    return value >= this.minimum && value <= this.maximum;
+  }
 }
