@@ -1,0 +1,25 @@
+$break-points: (
+  xs: 0,
+  sm: 600px,
+  md: 960px,
+  lg: 1280px,
+  xl: 1920px,
+);
+
+$columns: 12;
+
+@mixin grid-classes {
+  @each $size, $width in $break-points {
+    @media all and (min-width: $width) {
+      @for $i from 1 through $columns {
+        .flex.size-#{$size}#{$i} { 
+          flex-basis: ($i/$columns) * 100%;
+          flex-grow: 0;
+          max-width: ($i/$columns) * 100%;
+        }
+      }
+    }
+  }
+}
+
+@include grid-classes;

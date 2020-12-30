@@ -1,8 +1,14 @@
 <template>
-  <div class="menu" :class="{ dark }">
+  <div class="menu" :class="{ dark, open: expanded, closed: !expanded }">
+    <div class="header">
+      <div class="icon">
+        <Icon :icon="expanded ? backMenuIcon : menuIcon" />
+      </div>
+      <div class="title">
+        <h3 v-if="expanded">{{ title }}</h3>
+      </div>
+    </div>
     <div v-if="expanded">
-      <p>{{ title }}</p>
-      <Icon :icon="homeIcon" />
       <p>side menu</p>
     </div>
     <div v-else>
@@ -12,7 +18,7 @@
 </template>
 
 <script>
-import { mdiHome } from "@mdi/js";
+import { mdiMenu, mdiBackburger } from "@mdi/js";
 import Icon from "./Icon";
 export default {
   components: {
@@ -35,7 +41,8 @@ export default {
   data() {
     return {
       expanded: true,
-      homeIcon: mdiHome
+      menuIcon: mdiMenu,
+      backMenuIcon: mdiBackburger
     };
   }
 };
@@ -62,5 +69,12 @@ export default {
 
 .menu.closed {
   width: 30px;
+}
+
+.menu.open > .header {
+}
+
+.menu.open .icon {
+  float: right;
 }
 </style>
