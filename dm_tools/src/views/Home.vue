@@ -3,8 +3,8 @@
     <h1>Home Page</h1>
     <Container>
       <Layout>
-        <p class="flex size-xs3">test</p>
-        <p>test2</p>
+        <Flex xs4>test</Flex>
+        <Flex>test2</Flex>
       </Layout>
     </Container>
     <SideMenu title="test" dark></SideMenu>
@@ -15,12 +15,14 @@
 import SideMenu from "@/components/SideMenu";
 import Container from "@/components/Flex/Container";
 import Layout from "@/components/Flex/Layout";
+import Flex from "@/components/Flex/Flex";
 export default {
   name: "Home",
   components: {
     SideMenu,
     Container,
-    Layout
+    Layout,
+    Flex
   }
 };
 </script>

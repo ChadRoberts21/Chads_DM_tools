@@ -6,20 +6,168 @@ $break-points: (
   xl: 1920px,
 );
 
+$break-padding: (
+  xs: 2px,
+  sm: 4px,
+  md: 8px,
+  lg: 16px,
+  xl: 24px,
+);
+
 $columns: 12;
 
 @mixin grid-classes {
   @each $size, $width in $break-points {
     @media all and (min-width: $width) {
       @for $i from 1 through $columns {
-        .flex.size-#{$size}#{$i} { 
+        .flex.#{$size}#{$i} { 
           flex-basis: ($i/$columns) * 100%;
           flex-grow: 0;
           max-width: ($i/$columns) * 100%;
         }
+
+        .flex.offset-#{$size}#{$i} {
+          margin-left: ($i/$columns) * 100%;
+        }
+
+        .flex.order-#{$size}#{$i} {
+          order: $i;
+        }
+      }
+
+      .container {
+        padding: map-get($break-padding, $size);
+      }
+
+      .container.grid-list-#{$size} .layout .flex {
+        padding: map-get($break-padding, $size)/2;
+      }
+
+      .text-#{$size}-right {
+        text-align: right !important;
+      }
+
+      .text-#{$size}-left {
+        text-align: left !important;
+      }
+
+      .text-#{$size}-center {
+        text-align: center !important;
       }
     }
   }
 }
 
 @include grid-classes;
+
+.spacer {
+  flex-grow: 1 !important;
+}
+
+.container {
+  flex: 1 1 100%;
+  margin: auto;
+  padding: 24px;
+  width: 100%;
+}
+
+.container.fluid {
+  max-width: 100%;
+}
+
+.layout {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.row {
+  flex-direction: row;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+.column {
+  flex-direction: column;
+}
+.column-reverse {
+  flex-direction: column-reverse;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.nowrap {
+  flex-wrap: nowrap;
+}
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+.fill-height {
+  height: 100%;
+}
+
+.jc-flex-start {
+  justify-content: flex-start;
+}
+.jc-flex-end {
+  justify-content: flex-end;
+}
+.jc-center {
+  justify-content: center;
+}
+.jc-space-between {
+  justify-content: space-between;
+}
+.jc-space-around {
+  justify-content: space-around;
+}
+.jc-space-evenly {
+  justify-content: space-evenly;
+}
+
+.jc-start {
+  justify-content: start;
+}
+.jc-end {
+  justify-content: end;
+}
+.jc-left {
+  justify-content: left;
+}
+.jc-right {
+  justify-content: right;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+.align-flex-start {
+  align-items: flex-start;
+}
+.align-flex-end {
+  align-items: flex-end;
+}
+.align-center {
+  align-items: center;
+}
+.align-baseline {
+  align-items: baseline;
+}
+.align-first-baseline {
+  align-items: first baseline;
+}
+.align-last-baseline {
+  align-items: last baseline;
+}
+.align-start {
+  align-items: start;
+}
+.align-end {
+  align-items: end;
+}
+.align-self-start {
+  align-items: self-start;
+}
+.align-self-end {
+  align-items: self-end;
+}
