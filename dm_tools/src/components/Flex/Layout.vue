@@ -23,7 +23,7 @@ export default {
       type: Boolean,
       default: false
     },
-    "fill-height": {
+    fillHeight: {
       type: Boolean,
       default: false
     },
@@ -99,7 +99,7 @@ export default {
       return direction;
     },
     classes() {
-      let classes = `${this.justifyContent} ${this.align} ${this.direction}`;
+      let classes = `${this.justifyContent} ${this.alignItems} ${this.direction}`;
 
       if (this.wrap) classes += " wrap";
       return classes;
@@ -107,7 +107,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-
-</style>

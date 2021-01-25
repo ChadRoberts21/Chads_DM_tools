@@ -15,6 +15,7 @@ $break-padding: (
 );
 
 $columns: 12;
+$app-border-radius: 10px;
 
 @mixin grid-classes {
   @each $size, $width in $break-points {
@@ -67,8 +68,6 @@ $columns: 12;
 .container {
   flex: 1 1 100%;
   margin: auto;
-  padding: 24px;
-  width: 100%;
 }
 
 .container.fluid {
@@ -170,4 +169,11 @@ $columns: 12;
 }
 .align-self-end {
   align-items: self-end;
+}
+
+.float-right {
+  float: right;
+}
+.float-left {
+  float: left;
 }

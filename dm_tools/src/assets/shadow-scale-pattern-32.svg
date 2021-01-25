@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;"
+  xmlns:vectornator="http://vectornator.io"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" width="100%" height="100%">
+  <metadata>
+    <vectornator:setting key="DimensionsVisible" value="1"/>
+    <vectornator:setting key="DynamicGuides" value="1"/>
+    <vectornator:setting key="SnapToPoints" value="0"/>
+    <vectornator:setting key="GuidesVisible" value="1"/>
+    <vectornator:setting key="RulersVisible" value="1"/>
+    <vectornator:setting key="CMYKEnabledKey" value="0"/>
+    <vectornator:setting key="SnapToEdges" value="0"/>
+    <vectornator:setting key="DisplayWhiteBackground" value="0"/>
+    <vectornator:setting key="SnapToGuides" value="1"/>
+    <vectornator:setting key="GridSpacing" value="1"/>
+    <vectornator:setting key="SnapToGrid" value="1"/>
+    <vectornator:setting key="Units" value="Pixels"/>
+    <vectornator:setting key="New" value="1"/>
+  </metadata>
+  <defs>
+    <linearGradient y1="-3" id="LinearGradient" x1="24" y2="2" x2="24" gradientUnits="userSpaceOnUse" gradientTransform="matrix(4.03258 0 0 4.02886 -96.6843 12.202)">
+      <stop stop-color="#000000" offset="0"/>
+      <stop stop-color="#ffffff" offset="1"/>
+    </linearGradient>
+    <linearGradient y1="1" id="LinearGradient_2" x1="24" y2="6" x2="24" gradientUnits="userSpaceOnUse" gradientTransform="matrix(4.03258 0 0 4.02886 -96.6843 12.202)">
+      <stop stop-color="#000000" offset="0"/>
+      <stop stop-color="#ffffff" offset="1"/>
+    </linearGradient>
+    <linearGradient y1="5" id="LinearGradient_3" x1="16" y2="10" x2="16" gradientUnits="userSpaceOnUse" gradientTransform="matrix(4.03258 0 0 4.02886 -48.2933 4.14429)">
+      <stop stop-color="#000000" offset="0"/>
+      <stop stop-color="#ffffff" offset="1"/>
+    </linearGradient>
+    <linearGradient y1="-3" id="LinearGradient_4" x1="16" y2="2" x2="16" gradientUnits="userSpaceOnUse" gradientTransform="matrix(4.03258 0 0 4.02886 -48.2933 4.14429)">
+      <stop stop-color="#000000" offset="0"/>
+      <stop stop-color="#ffffff" offset="1"/>
+    </linearGradient>
+    <linearGradient y1="1" id="LinearGradient_5" x1="16" y2="6" x2="16" gradientUnits="userSpaceOnUse" gradientTransform="matrix(4.03258 0 0 4.02886 -48.2933 4.14429)">
+      <stop stop-color="#000000" offset="0"/>
+      <stop stop-color="#ffffff" offset="1"/>
+    </linearGradient>
+    <linearGradient y1="3" id="LinearGradient_6" x1="20" y2="8" x2="20" gradientUnits="userSpaceOnUse" gradientTransform="matrix(4.03258 0 0 4.02886 -48.2933 4.14429)">
+      <stop stop-color="#000000" offset="0"/>
+      <stop stop-color="#ffffff" offset="1"/>
+    </linearGradient>
+    <linearGradient y1="-3" id="LinearGradient_7" x1="16" y2="2" x2="16" gradientUnits="userSpaceOnUse" gradientTransform="matrix(4.03258 0 0 4.02886 -32.1629 -3.91342)">
+      <stop stop-color="#000000" offset="0"/>
+      <stop stop-color="#ffffff" offset="1"/>
+    </linearGradient>
+    <linearGradient y1="-3" id="LinearGradient_8" x1="24" y2="2" x2="24" gradientUnits="userSpaceOnUse" gradientTransform="matrix(4.03258 0 0 4.02886 -96.6843 -3.91342)">
+      <stop stop-color="#000000" offset="0"/>
+      <stop stop-color="#ffffff" offset="1"/>
+    </linearGradient>
+    <linearGradient y1="3" id="LinearGradient_9" x1="20" y2="8" x2="20" gradientUnits="userSpaceOnUse" gradientTransform="matrix(4.03258 0 0 4.02886 -48.2933 -11.9711)">
+      <stop stop-color="#000000" offset="0"/>
+      <stop stop-color="#ffffff" offset="1"/>
+    </linearGradient>
+  </defs>
+  <pattern id="pattern-scales" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+  <g id="Layer 1" vectornator:layerName="Layer 1">
+    <path stroke="#2e2e2e" stroke-opacity="0" stroke-width="0.1" d="M-3.93483+0.115436L-12+8.17315L0.0977508+20.2597L12.1955+8.17315L4.13033+0.115436L0.0977508+4.14429L-3.93483+0.115436Z" fill="url(#LinearGradient)" stroke-linecap="butt" opacity="0.240344" stroke-linejoin="round"/>
+    <path stroke="#2e2e2e" stroke-opacity="0" stroke-width="0.1" d="M-3.93483+16.2309L-12+24.2886L0.0977508+36.3752L12.1955+24.2886L4.13033+16.2309L0.0977508+20.2597L-3.93483+16.2309Z" fill="url(#LinearGradient_2)" stroke-linecap="butt" opacity="0.240344" stroke-linejoin="round"/>
+    <path stroke="#2e2e2e" stroke-opacity="0" stroke-width="0.1" d="M12.1955+24.2886L4.13033+32.3463L16.2281+44.4329L28.3258+32.3463L20.2607+24.2886L16.2281+28.3174L12.1955+24.2886Z" fill="url(#LinearGradient_3)" stroke-linecap="butt" opacity="0.240344" stroke-linejoin="round"/>
+    <path stroke="#2e2e2e" stroke-opacity="0" stroke-width="0.1" d="M12.1955-7.94228L4.13033+0.115436L16.2281+12.202L28.3258+0.115436L20.2607-7.94228L16.2281-3.91342L12.1955-7.94228Z" fill="url(#LinearGradient_4)" stroke-linecap="butt" opacity="0.240344" stroke-linejoin="round"/>
+    <path stroke="#2e2e2e" stroke-opacity="0" stroke-width="0.1" d="M12.1955+8.17315L4.13033+16.2309L16.2281+28.3174L28.3258+16.2309L20.2607+8.17315L16.2281+12.202L12.1955+8.17315Z" fill="url(#LinearGradient_5)" stroke-linecap="butt" opacity="0.240344" stroke-linejoin="round"/>
+    <path stroke="#2e2e2e" stroke-opacity="0" stroke-width="0.1" d="M28.3258+16.2309L20.2607+24.2886L32.3584+36.3752L44.4562+24.2886L36.391+16.2309L32.3584+20.2597L28.3258+16.2309Z" fill="url(#LinearGradient_6)" stroke-linecap="butt" opacity="0.240344" stroke-linejoin="round"/>
+    <path stroke="#2e2e2e" stroke-opacity="0" stroke-width="0.1" d="M28.3258-16L20.2607-7.94228L32.3584+4.14429L44.4562-7.94228L36.391-16L32.3584-11.9711L28.3258-16Z" fill="url(#LinearGradient_7)" stroke-linecap="butt" opacity="0.240344" stroke-linejoin="round"/>
+    <path stroke="#2e2e2e" stroke-opacity="0" stroke-width="0.1" d="M-3.93483-16L-12-7.94228L0.0977508+4.14429L12.1955-7.94228L4.13033-16L0.0977508-11.9711L-3.93483-16Z" fill="url(#LinearGradient_8)" stroke-linecap="butt" opacity="0.240344" stroke-linejoin="round"/>
+    <path stroke="#2e2e2e" stroke-opacity="0" stroke-width="0.1" d="M28.3258+0.115436L20.2607+8.17315L32.3584+20.2597L44.4562+8.17315L36.391+0.115436L32.3584+4.14429L28.3258+0.115436Z" fill="url(#LinearGradient_9)" stroke-linecap="butt" opacity="0.240344" stroke-linejoin="round"/>
+  </g>
+  </pattern>
+  <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-scales)"></rect>
+</svg>

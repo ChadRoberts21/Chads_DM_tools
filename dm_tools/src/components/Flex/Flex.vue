@@ -5,7 +5,7 @@
 </template>
 
 <script>
-// TODO: find a better implimentation
+// TODO: find a better implimentation, than this stupid way
 export default {
   props: {
     grow: {
@@ -288,7 +288,7 @@ export default {
 <style lang="scss">
 .flex,
 .child-flex > * {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   max-width: 100%;
 }
 

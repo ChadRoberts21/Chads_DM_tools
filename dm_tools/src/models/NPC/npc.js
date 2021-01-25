@@ -1,3 +1,5 @@
+import MonsterStats from "../monsterStats";
+
 export default class NPC {
   constructor() {
     this.firstName;
@@ -8,5 +10,7 @@ export default class NPC {
     this.weight;
     this.race;
     this.alignment;
+
+    this.stats = new MonsterStats();
   }
 }

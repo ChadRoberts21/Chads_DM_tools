@@ -15,6 +15,17 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue")
+  },
+  {
+    path: "/npcGenerator",
+    name: "NpcGenerator",
+    component: () =>
+      import(/* webpackChunkName: "npcGenerator" */ "../views/NpcGenerator.vue")
+  },
+  {
+    path: "/dice",
+    name: "Dice",
+    component: () => import(/* webpackChunkName: "dice" */ "../views/Dice.vue")
   }
 ];
 
