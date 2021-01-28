@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h1>Dice Page</h1>
-  </div>
+  <container>
+    <layout>
+      <flex>
+        <h1>Dice Page</h1>
+      </flex>
+    </layout>
+  </container>
 </template>
-
-<script>
-export default {};
-</script>

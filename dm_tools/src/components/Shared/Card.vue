@@ -1,12 +1,26 @@
 <template>
   <div class="card">
+    <div
+      v-if="title"
+      class="title"
+      :style="{ backgroundImage: `url(${background})` }"
+    >
+      <h2>{{ title }}</h2>
+    </div>
     <slot />
   </div>
 </template>
 
 <script>
+import ScalesSvg from "@/assets/shadow-scale-pattern-32.svg";
 export default {
-  name: "Card"
+  name: "Card",
+  props: ["title"],
+  data() {
+    return {
+      background: ScalesSvg
+    };
+  }
 };
 </script>
 
@@ -22,5 +36,12 @@ export default {
   padding-right: 0;
   background: white;
   color: #000;
+}
+
+.card .title {
+  border-radius: $app-border-radius $app-border-radius 0 0;
+  background: $primary;
+  color: white;
+  min-height: 2rem;
 }
 </style>

@@ -16,6 +16,10 @@ export default {
       type: Boolean,
       default: false
     },
+    fill: {
+      type: Boolean,
+      default: false
+    },
     size: {
       type: Number,
       default: 1
@@ -277,8 +281,9 @@ export default {
 
     classes() {
       let classes = `${this.sizeClass} ${this.offsetClass}`;
-      if (this.grow) classes += "grow";
-      if (this.shrink) classes += "shrink";
+      if (this.grow) classes += "grow ";
+      if (this.shrink) classes += "shrink ";
+      if (this.fill) classes += "fill ";
       return classes;
     }
   }
@@ -299,5 +304,12 @@ export default {
 .shrink {
   flex-grow: 0 !important;
   flex-shrink: 1 !important;
+}
+
+.fill {
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: strech;
 }
 </style>
