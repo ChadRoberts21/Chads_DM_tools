@@ -12,6 +12,29 @@
         </layout>
       </flex>
       <flex>
+        <layout column>
+          <flex>
+            Gender:
+          </flex>
+          <flex>
+            <layout row>
+              <flex>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Female</label>
+              </flex>
+              <flex>
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Male</label>
+              </flex>
+              <flex>
+                <input type="radio" id="any" name="gender" value="any" />
+                <label for="any">Any</label>
+              </flex>
+            </layout>
+          </flex>
+        </layout>
+      </flex>
+      <flex>
         <dragon-button>
           test
         </dragon-button>
@@ -53,5 +76,18 @@ input:focus {
   outline: none;
   box-shadow: 0 3px 6px 0px #000000aa;
   border-width: 3px;
+}
+
+input[type="radio" i] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0 5px;
+  border: 1px solid $primary;
+}
+
+input:checked {
+  border: 1px solid $primary;
+  background: $primary;
 }
 </style>
