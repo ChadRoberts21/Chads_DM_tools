@@ -20,12 +20,17 @@ export default {
 button {
   background: $primary;
   color: white;
+  fill: white;
   border-radius: $app-border-radius;
   padding: 0.25rem;
   padding: 0.5rem 1rem;
   border: unset;
   font: unset;
   font-weight: bold;
+  text-align: center;
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
 }
 
 button:focus {
@@ -36,11 +41,13 @@ button:focus {
 button:hover {
   background: white;
   color: $primary;
+  fill: $primary;
 }
 
 button:active {
   background: white;
   color: $primary;
+  fill: $primary;
   box-shadow: 0 4px 12px 1px #000000aa;
 }
 </style>

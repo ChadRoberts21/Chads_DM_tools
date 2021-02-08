@@ -2,9 +2,8 @@ import { randomIntFromInterval, randomChoice } from "../helpers";
 import NPC from "./npc";
 
 export default class NpcGenerator {
-  constructor(firstNames, lastNames, jobs, gender, raceGenerator) {
-    this.firstNames = firstNames;
-    this.lastNames = lastNames;
+  constructor(names, jobs, gender, raceGenerator) {
+    this.names = names;
     this.jobs = jobs;
     this.gender = gender;
     this.raceGenerator = raceGenerator;
@@ -18,19 +17,38 @@ export default class NpcGenerator {
     return randomChoice(this.jobs);
   }
 
-  randomFirstName(gender) {
-    return randomChoice(this.firstNames[gender]);
+  randomFirstName(gender, raceKey = null) {
+    if (raceKey) {
+      return randomChoice(this.names[raceKey].FirstNames[gender]);
+    }
+    return randomChoice(this.names.FirstNames[gender]);
   }
 
-  randomLastName() {
-    const dataKey = randomIntFromInterval(1, 100) > 90 ? "rare" : "common";
-    return randomChoice(this.lastNames[dataKey]);
+  randomLastName(raceKey = null) {
+    let lastNames;
+    if (raceKey) {
+      lastNames = this.names[raceKey].LastNames;
+    } else {
+      lastNames = this.names.LastNames;
+    }
+
+    let lastName = " ";
+    if (lastNames) {
+      if (lastNames.rare) {
+        const dataKey = randomIntFromInterval(1, 100) > 90 ? "rare" : "common";
+        lastName = randomChoice(lastNames[dataKey]);
+      } else {
+        lastName = randomChoice(lastNames.common);
+      }
+    }
+    return lastName;
   }
 
   new() {
     let genderKey;
     if (
-      this.gender.toLowerCase() !== "male" ||
+      this.gender &&
+      this.gender.toLowerCase() !== "male" &&
       this.gender.toLowerCase() !== "female"
     ) {
       genderKey = this.randomGender();
@@ -39,10 +57,14 @@ export default class NpcGenerator {
     }
 
     const raceDetails = this.raceGenerator.new();
+    let raceKey = null;
+    if (this.names.isSplit) {
+      raceKey = this.names.isSplit.by === "race" ? raceDetails.race : null;
+    }
 
     return new NPC({
-      firstName: this.randomFirstName(genderKey),
-      lastName: this.randomLastName(),
+      firstName: this.randomFirstName(genderKey, raceKey),
+      lastName: this.randomLastName(raceKey),
       gender: genderKey,
       job: this.randomJob(),
       age: raceDetails.age,

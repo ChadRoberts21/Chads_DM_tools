@@ -2,12 +2,15 @@
   <container>
     <layout column>
       <flex>
-        <layout>
+        <layout column>
           <flex>
             Count:
           </flex>
           <flex>
-            <input type="number" />
+            <dragon-number-input
+              :value="localCount"
+              @change="handelCountChange"
+            />
           </flex>
         </layout>
       </flex>
@@ -19,15 +22,36 @@
           <flex>
             <layout row>
               <flex>
-                <input type="radio" id="female" name="gender" value="female" />
+                <input
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="female"
+                  @click="handleGenderChange"
+                  :checked="defaultOptions.gender === 'female'"
+                />
                 <label for="female">Female</label>
               </flex>
               <flex>
-                <input type="radio" id="male" name="gender" value="male" />
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="male"
+                  @click="handleGenderChange"
+                  :checked="defaultOptions.gender === 'male'"
+                />
                 <label for="male">Male</label>
               </flex>
               <flex>
-                <input type="radio" id="any" name="gender" value="any" />
+                <input
+                  type="radio"
+                  id="any"
+                  name="gender"
+                  value="any"
+                  @click="handleGenderChange"
+                  :checked="defaultOptions.gender === 'any'"
+                />
                 <label for="any">Any</label>
               </flex>
             </layout>
@@ -35,8 +59,41 @@
         </layout>
       </flex>
       <flex>
-        <dragon-button>
-          test
+        <layout column>
+          <flex>
+            Style:
+          </flex>
+          <flex>
+            <layout row>
+              <flex>
+                <input
+                  type="radio"
+                  id="clasic"
+                  name="style"
+                  value="classic"
+                  @click="handleStyleChange"
+                  :checked="defaultOptions.style === 'classic'"
+                />
+                <label for="classic">Classic</label>
+              </flex>
+              <flex>
+                <input
+                  type="radio"
+                  id="modurn"
+                  name="style"
+                  value="modurn"
+                  @click="handleStyleChange"
+                  :checked="defaultOptions.style === 'modurn'"
+                />
+                <label for="male">Modurn</label>
+              </flex>
+            </layout>
+          </flex>
+        </layout>
+      </flex>
+      <flex>
+        <dragon-button @click="handleGenerate">
+          Generate
         </dragon-button>
       </flex>
     </layout>
@@ -44,14 +101,48 @@
 </template>
 
 <script>
+import { mdiPlus, mdiMinus } from "@mdi/js";
 import DragonButton from "@/components/Shared/DragonButton";
+import DragonNumberInput from "@/components/Shared/DragonNumberInput.vue";
 export default {
   name: "Options",
   components: {
-    DragonButton
+    DragonButton,
+    DragonNumberInput
   },
   props: {
-    count: Number
+    defaultOptions: Object
+  },
+  data() {
+    return {
+      plusIcon: mdiPlus,
+      minusIcon: mdiMinus,
+      localCount: this.defaultOptions?.count ?? 10,
+      localGender: "any",
+      localStyle: "classic"
+    };
+  },
+  methods: {
+    handelCountChange(value) {
+      this.localCount = value;
+    },
+    handleGenderChange(value) {
+      if (value.target) this.localGender = value.target.value;
+      else this.localGender = value;
+    },
+    handleStyleChange(value) {
+      if (value.target) this.localStyle = value.target.value;
+      else this.localStyle = value;
+    },
+    handleGenerate() {
+      let options = {
+        count: this.localCount,
+        gender: this.localGender,
+        style: this.localStyle
+      };
+
+      this.$emit("generate", options);
+    }
   }
 };
 </script>
@@ -68,7 +159,6 @@ input {
   padding: 5px;
   width: min-content;
   font: unset;
-  margin: 5px;
   max-width: 6rem;
 }
 

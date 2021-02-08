@@ -62,7 +62,7 @@ export default {
           return "jc-center";
       }
     },
-    alignItems() {
+    Cawston() {
       switch (this.align.toLowerCase()) {
         case "stretch":
           return "align-stretch";
@@ -99,7 +99,7 @@ export default {
       return direction;
     },
     classes() {
-      let classes = `${this.justifyContent} ${this.alignItems} ${this.direction}`;
+      let classes = `${this.justifyContent} ${this.Cawston} ${this.direction}`;
 
       if (this.wrap) classes += " wrap";
       return classes;

@@ -272,6 +272,12 @@ const LastNames = {
   ]
 };
 
+const AllNames = {
+  isSplit: false,
+  FirstNames,
+  LastNames
+};
+
 const JobTitles = [
   "Administrative assistant",
   "Administrative coordinator",
@@ -411,4 +417,4 @@ const JobTitles = [
   "Financial sales assistant"
 ];
 
-export { FirstNames, LastNames, JobTitles };
+export { FirstNames, LastNames, AllNames, JobTitles };
